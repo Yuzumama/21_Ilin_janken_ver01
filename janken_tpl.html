@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <link rel="stylesheet" href="css/sample.css">
+    <title>Rock, Paper, Scissors</title>
+</head>
+
+<body>
+
+    <header>
+        <h1 class="text_style1">Rock, Paper, Scissors</h1>
+    </header>
+
+    <main>
+        <div class="text_style2">Come On! Let's Play!!</div>
+        
+        <ul>
+            <li id="stone_btn" class="text_style2">Rock</li>
+            <li id="scissors_btn" class="text_style2">Scissors</li>
+            <li id="paper_btn" class="text_style2">Paper</li>
+        </ul>
+        <div class="text_style2">Computer Shows「<span id="pc_hands"></span>」</div>
+        <div class="text_style2">You <span id="judgment" ></span></div>
+    </main>
+
+    <footer></footer>
+    <script>
+     
+    $("#stone_btn").on("click", function(){
+        const r = Math.ceil(Math.random()*3);
+        // 條件
+        let view = "";
+            if(r ==1){
+                 view = "Rock";
+                 view2 = "Tie";
+            }if(r==2){
+                view = "Paper";
+                view2 = "Lose";
+            }if(r==3){
+                view = "Scissors";
+                view2 = "Win";
+            }
+   
+
+
+            // 顯示
+            $("#pc_hands").html(view);
+            $("#judgment").text(view2);
+
+    });
+    
+    $("#scissors_btn").on("click", function(){
+        const r = Math.ceil(Math.random()*3);
+        // 條件
+        let view = "";
+            if(r ==1){
+                 view = "Rock";
+                 view2 = "Lose";
+            }if(r==2){
+                view = "Paper";
+                view2 = "Win";
+            }if(r==3){
+                view = "Scissors";
+                view2 = "Tie";
+            }
+   
+
+
+            // 顯示
+            $("#pc_hands").text(view);
+            $("#judgment").text(view2);
+
+    });
+
+    $("#paper_btn").on("click", function(){
+        const r = Math.ceil(Math.random()*3);
+        // 條件
+        let view = "";
+            if(r ==1){
+                 view = "Rock";
+                 view2 = "Win";
+            }if(r==2){
+                view = "Paper";
+                view2 = "Tie";
+            }if(r==3){
+                view = "Scissors";
+                view2 = "Lose";
+            }
+   
+
+
+            // 顯示
+            $("#pc_hands").text(view);
+            $("#judgment").text(view2);
+
+    });
+
+    </script>
+</body>
+
+</html>
