@@ -1,0 +1,141 @@
+.text_style1{
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: goldenrod;
+}
+
+/* 整個版面 */
+.all_base {
+    width: 800px;
+    margin: 0px auto;
+    border: 0px;
+}
+/* PC & Player */
+.main_content{
+    display: flex;
+}
+
+/* PC Part 1 - Girl */
+.speech-bubble {
+	position: relative;
+	background: #00aabb;
+	border-radius: .4em;
+    text-align: center;
+    height: 60px;
+}
+
+.speech-bubble:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 00%;
+	height: 10%;
+	border: 20px solid transparent;
+	border-top-color: #00aabb;
+	border-bottom: 0;
+	border-left: 0;
+	margin-left: -10px;
+	margin-bottom: -20px;
+}
+
+.speech_text{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    width: 100%;
+    color: #FFF;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* PC Part 2 - deskboard */
+.pc_board{
+    width: 100%;
+    display: block;
+    align-items: center;
+    margin: 0px auto;
+}
+
+.pc_hands_class{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px auto;
+}
+
+.pc_hands_msg_class{
+    padding-right: 10px;
+}
+
+
+
+.pc_hands_pic_class{
+    height: 100px;
+    width: 100px;
+}
+
+/* Player Part */
+/* Part 1 */
+
+.btn_not_chosen_class{
+    height: 191px;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    margin: 0x auto;
+    opacity: 0.1;
+    padding-left: 50px;
+}
+
+.btn_not_chosen_class:hover{
+    height: 191px;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    margin: 0x auto;
+    opacity: 0.5;
+    padding-left: 50px;
+}
+
+.btn_chosen_class{
+    height: 191px;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    margin: 0x auto;
+    opacity: 1.0;
+    padding-left: 50px;
+}
+
+.btn_chosen_class:hover{
+    height: 191px;
+    color: #666666;
+    display: flex;
+    align-items: center;
+    margin: 0x auto;
+    opacity: 0.7;
+    padding-left: 50px;
+}
+
+
+
+/* Part 2 */
+.judgment_class{
+    height: 100px;
+    padding-top: 1px;
+    display: flex;
+    align-items: center;
+    margin: 0x auto;
+}
+
+
+.player_score_class{
+    width: 500px;
+    padding-bottom: 30px;
+}
+
+
+

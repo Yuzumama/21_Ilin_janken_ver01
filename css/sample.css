@@ -6,7 +6,7 @@ body{
 }
 header{
     background-color: #fff;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 0px solid #ccc;
     text-align: center;
 }
 main{
@@ -14,7 +14,7 @@ main{
 }
 footer{
     background-color: #fff;
-    border-bottom:1px solid #ccc;
+    border-bottom:px solid #ccc;
     text-align: center;
 }
 p{
@@ -23,14 +23,15 @@ p{
     border-bottom:1px solid #fff;
     height:200px;
 }
-ul{
+ul2{
     padding: 0;
+    padding-top: 50px;
     border-top: 1px solid #000000;
     display:table;  /* 定義 */
-    table-layout: fixed;
+    table-layout: flex;
     width:100%;
 }
-li{
+li2{
     list-style-type:none;
     border: 1px solid #666;
     background-color: #FFF;
@@ -42,18 +43,3 @@ li:hover{
     color:#fff;
 }
 
-.text_style1{
-    text-align: center;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: goldenrod;
-    padding-bottom: 50px;
-}
-
-
-
-.text_style2{
-    text-align: center;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 40px;
-    padding: 30px;
-}

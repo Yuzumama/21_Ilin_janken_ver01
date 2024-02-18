@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <link rel="stylesheet" href="css/sample.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Rock, Paper, Scissors</title>
+</head>
+
+<body>
+
+    <header>
+        <h1 class="text_style1">ADA's Rock, Paper, Scissors</h1>
+    </header>
+
+    <main>
+        <div class="all_base">
+            <div class="main_content">
+
+                <!-- PC Part -->
+                <!-- Part 1 -->
+                <div class="pc_base">
+                    <div class="pc_pic">
+                        <div class="speech-bubble">
+                            <div class="speech_text">Come On! Let's Play!!</div>
+                        </div>
+                        <img src="img/ADA_girl.jpg" alt="" width="500px" height="500px">
+                    </div>
+
+                    <!-- Part 2 -->
+                    <div class="pc_board">
+                        <div class="pc_hands_class">
+                            <div id="pc_hands_msg" class="pc_hands_msg_class"></div> <div class="pc_hands_pic_class" id="pc_hands"></div>
+                        </div>
+                        <div class="pc_score_class"> ADA had winned <span id="pc_score"> 0 </span> times </div>
+                    </div>
+                </div>
+
+                <!-- Player Part -->
+                <!-- Part 1 -->
+                <div class="player_base">
+                    <div class="player_btns">
+                        <div id="rock_btn" class="btn_not_chosen_class">
+                            <img src="img/rock_1.jpg" height="100%"> Rock
+                        </div>
+                        <div id="scissors_btn" class="btn_not_chosen_class">
+                            <img src="img/scissors_1.jpg" height="100%"> Scissors
+                        </div>
+                        <div id="paper_btn" class="btn_not_chosen_class">
+                            <img src="img/paper_1.jpg" height="100%"> Paper
+                        </div>
+                    </div>
+                    <!-- Part 2 -->
+                    <div class="player_board">
+                        <div class="judgment_class"> <span id="judgment"></span></div>
+                        <div class="player_score_class"> You had winned <span id="player_score"> 0 </span> times </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer></footer>
+    <!-- JavaScript -->
+    <script>
+
+    let pc_win_times = 0;
+    let player_win_times = 0;
+     
+    $("#rock_btn").on("click", function(){
+        const r = Math.ceil(Math.random()*3);
+        // Condition - Button
+        let view = "";
+        if(r ==1){
+                view = "<img src='img/rock_pc.jpg' height='100px'>";
+                view2 = "Draw";
+        }if(r==2){
+            view = "<img src='img/paper_pc.jpg' height='100px'>";
+            view2 = "You lose";
+
+            
+        }if(r==3){
+            view = "<img src='img/scissors_pc.jpg' height='100px'>";
+            view2 = "You win";
+        }
+       
+        //Condition - Score
+        if(view2=="You win") {
+            player_win_times = player_win_times + 1;
+        }if(view2 == "You lose"){
+            pc_win_times = pc_win_times + 1;
+        }
+
+        // View - PC Result
+        $("#pc_hands_msg").text("ADA shows");
+        $("#pc_hands").html(view);
+        $("#judgment").text(view2);
+
+        // View - Score
+        $("#pc_score").text(pc_win_times);
+        $("#player_score").text(player_win_times);
+
+        // View - Button
+        $("#rock_btn").attr("class", "btn_chosen_class");
+        $("#scissors_btn").attr("class", "btn_not_chosen_class");
+        $("#paper_btn").attr("class", "btn_not_chosen_class");
+    });
+    
+    $("#scissors_btn").on("click", function(){
+        const r = Math.ceil(Math.random()*3);
+        // Condition - Button
+        let view = "";
+        if(r ==1){
+            view = "<img src='img/rock_pc.jpg' height='100px'>";
+            view2 = "You lose";
+        }if(r==2){
+            view = "<img src='img/paper_pc.jpg' height='100px'>";
+            view2 = "You win";
+
+            player_win_times = player_win_times + 1;
+        }if(r==3){
+            view = "<img src='img/scissors_pc.jpg' height='100px'>";
+            view2 = "Draw";
+        }
+
+        //Condition - Score
+        if(view2=="You win") {
+            player_win_times = player_win_times + 1;
+        }if(view2 == "You lose"){
+            pc_win_times = pc_win_times + 1;
+        }
+
+        // View - PC Result
+        $("#pc_hands_msg").text("ADA shows");
+        $("#pc_hands").html(view);
+        $("#judgment").text(view2);
+
+        // View - Score
+        $("#pc_score").text(pc_win_times);
+        $("#player_score").text(player_win_times);
+
+        // View - Button
+        $("#rock_btn").attr("class", "btn_not_chosen_class");
+        $("#scissors_btn").attr("class", "btn_chosen_class");
+        $("#paper_btn").attr("class", "btn_not_chosen_class");
+    });
+
+
+    $("#paper_btn").on("click", function(){
+        const r = Math.ceil(Math.random()*3);
+        // Condition - Button
+        let view = "";
+        if(r ==1){
+            view = "<img src='img/rock_pc.jpg' height='100px'>";
+            view2 = "You win";
+        }if(r==2){
+            view = "<img src='img/paper_pc.jpg' height='100px'>";
+            view2 = "Draw";
+        }if(r==3){
+            view = "<img src='img/scissors_pc.jpg' height='100px'>";
+            view2 = "You lose";
+        }
+
+        //Condition - Score
+        if(view2=="You win") {
+            player_win_times = player_win_times + 1;
+        }if(view2 == "You lose"){
+            pc_win_times = pc_win_times + 1;
+        }
+
+
+        // View - PC Result
+        $("#pc_hands_msg").text("ADA shows");
+        $("#pc_hands").html(view);
+        $("#judgment").text(view2);
+
+        // View - Score
+        $("#pc_score").text(pc_win_times);
+        $("#player_score").text(player_win_times);
+
+        // View - Button
+        $("#rock_btn").attr("class", "btn_not_chosen_class");
+        $("#scissors_btn").attr("class", "btn_not_chosen_class");
+        $("#paper_btn").attr("class", "btn_chosen_class");
+    });
+
+    </script>
+</body>
+
+</html>
