@@ -1,8 +1,8 @@
 # ジャンケンアプリ
 ## 課題内容（どんな作品か）
-おみくじ.ver01 
+おみくじ.ver01 - janken_tpl.html
 
-ADA Girl おみくじ.ver02
+ADA Girl おみくじ.ver02 - janken_tpl copy.html
 
 
 
